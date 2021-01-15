@@ -46,5 +46,17 @@ it('Admin should be in usernames', ()=>{
     expect(usernames).toContain('dj');
 })
 
+//Promises
+// it('User fetched name should be Ervin Howell', () =>{
+//     expect.assertions(1);
+//     return functions.fetchUser().then(data => {
+//         expect(data.name).toEqual("Ervin Howell")
+//     });
+// })
 
-//Array
+//Async/Await
+it('User fetched name should be Ervin Howell', async () =>{
+    expect.assertions(1);
+    const data = await functions.fetchUser()
+        expect(data.name).toEqual("Ervin Howell")
+})
